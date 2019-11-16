@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS onlyATribute_DB;
+CREATE DATABASE onlyATribute_DB;
