@@ -32,7 +32,25 @@ $("#submit").on("click", function (event) {
 
         
         console.log(userData)
-        
+        ajaxCall()
     }
 });
+function ajaxCall (){
+var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://matchilling-tronald-dump-v1.p.rapidapi.com/random/quote",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "matchilling-tronald-dump-v1.p.rapidapi.com",
+		"x-rapidapi-key": "9728d91c67msh6eed533c1ad16bap127f72jsne2c44476bd32",
+		"accept": "application/hal+json"
+	}
+}
+
+$.ajax(settings).done(function (response) {
+    $("#quote").text(response.value);
+	console.log(response.value);
+});
+}
 
