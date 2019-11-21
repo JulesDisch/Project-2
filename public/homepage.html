@@ -19,7 +19,7 @@
 <body>
         <div id="main-container" class="container">
                 <section class="main-section">
-                    <h1>Project Title</h1>
+                    <h1>Potluck Planner</h1>
                     <hr>
                     <div id="game">
                         <div id="extra">
@@ -28,25 +28,30 @@
                             </h2>
         
                             <div id="survey-block">
-                                <h3><strong>About You</strong></h3>
-                                <h4>Item 1 (Required)</h4>
-                                <input type="text" id="item1" class="required">
-                                <h4>Item 2 (Required)</h4>
-                                <input type="text" id="item2" class="required">
+                                <h3><strong>What are you bringing?</strong></h3>
+                                <h4>Your name (Required)</h4>
+                                <input type="text" id="name" class="required">
+                                <h4>Item  (Required)</h4>
+                                <input type="text" id="item" class="required">
         
                                 
                                 <h4>Category</h4>
                                 <select id="category">
                                     <option value=""></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
+                                    <option value="Appetizers">Appetizers</option>
+                                    <option value="Entrées">Entrées</option>
+                                    <option value="Desserts">Desserts</option>
+                                    <option value="Drinks">Drinks</option>
                                 </select>
                                 <!-- Submit Button -->
                                 <button type="submit" id="submit">
                                     Submit</button>
                             </div>
-                            <h3 id="quote"></h3>
+                            <h3 id="food-name"></h3>
+                            <h3 id="food-item"></h3>
+                            <h3 id="food-category"></h3>
+                            <object id="youtube" width="420" height="345" >
+                            </object>
                         </div>
                     </div>
                 </section>

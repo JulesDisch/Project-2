@@ -15,7 +15,7 @@ App Instructions:
 * Home Page
     * 1. The user enters their name and picks a category.
     * 2. If the user knows what they want to bring, they enter the food item and then click 'submit'.
-    * 3. If the user doesn't know what they want to bring, they can click on the 'I don't know' button and receive a random meal recommendation.  After they make a decision, their choice will prepopulate in the food item feild and the user clicks 'submit'.
+    * 3. If the user doesn't know what they want to bring, they can click on the 'I don't know' button and receive a random meal recommendation.  After they make a decision, their choice will prepopulate in the food item field and the user clicks 'submit'.
 
 *  Display Page
     * 1. After the user clicks 'submit' on home page, they are automatically taken to the display page.
@@ -33,7 +33,8 @@ https://evening-stream-85249.herokuapp.com/
 
 
 Technology Used:
-* Node express
+* Node.js
+* Express.js
 * Sequelize CI
 * Meal DB API
 
