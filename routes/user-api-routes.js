@@ -40,8 +40,8 @@ module.exports = function(app) {
   app.post("/api/users", function(req, res) {
     console.log(req.body);
     db.User.create({
-      item1: req.body.item1,
-      item2: req.body.item2,
+      name: req.body.name,
+      item: req.body.item,
       category: req.body.category
     })
       .then(function(dbUser) {

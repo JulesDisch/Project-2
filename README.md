@@ -38,7 +38,8 @@ https://evening-stream-85249.herokuapp.com/
 
 
 Technology Used:
-* Node express
+* Node.js
+* Express.js
 * Sequelize CI
 * Meal DB API
 
