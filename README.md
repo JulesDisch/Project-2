@@ -6,21 +6,26 @@
 * Organization:
   The MVC method of file organization was used for the creation of this application. The application is organized in two pages:
   * Page 1 -- Home Page
-    User can enter their name and the food item they want to bring to the potluck event.
+    This page allows the user to add their food item to the master list.
 
   * Page 2 -- Display Page
-    This page displays a master list of all the foods that have been added to the potluck list. It also provides access for users to provide feedback with a comments section.
+    This page displays a master list of all the foods that have been added to the potluck list and provides the ability to chat with other users.
 
 App Instructions:
 * Home Page
     * 1. The user enters their name and picks a category.
     * 2. If the user knows what they want to bring, they enter the food item and then click 'submit'.
-    * 3. If the user doesn't know what they want to bring, they can click on the 'I don't know' button and receive a random meal recommendation.  After they make a decision, their choice will prepopulate in the food item feild and the user clicks 'submit'.
+    * 3. If the user doesn't know what they want to bring, they choose a food category and click 'search'.  The user will be given a random recipe.
+    * 4. If the user likes the search result, they will add the dish name to the form and click 'submit'.
+    * 5. The user is automatically taken to the display page after clicking submit.
 
 *  Display Page
-    * 1. After the user clicks 'submit' on home page, they are automatically taken to the display page.
-    * 2. The display page will show a master list of all food items and allow the user to delete their option by clicking on the 'remove from menu' button.
-    * 3. The user is also able to enter feedback using the comments section.
+    * 1. The display page is divided into two tabs:
+        * a. The Foods Tab -- the user will be able to view a list of all foods currently on the potluck food list.  The user will also be able to filter the list based on who added the food list entry.
+
+        * b. The chat tab -- the user will be able to chat will other users concerning the party and food submissions.
+
+
 
 Screenprints:
 <p><img src=""/></p>
@@ -38,8 +43,8 @@ Technology Used:
 * Meal DB API
 
 Role:
-* This was a group effort.  In general we all worked on developing the powerpoint for the presentation and the the final product.  Specifically:
 *   Alex -- coded the API and comment/blog.
 *   BinBin -- coded the database.
 *   Julie -- created the github repository, created heroku repository, provided the starter code for the project, and worked on the CSS styling.
 *   Tahnee -- worked on the home page survey.
+* The PowerPoint was created together.
