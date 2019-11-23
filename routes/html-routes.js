@@ -14,12 +14,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/homepage.html"));
   });
 
-  app.get("/homepage", function(req, res) {
+  app.get("/home", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/homepage.html"));
   });
 
-  app.get("/displaypage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/displaypage.html"));
+  app.get("/display", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/display.html"));
   });
 
   
