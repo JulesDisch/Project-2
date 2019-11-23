@@ -9,11 +9,21 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/site.webmanifest"> -->
+    <link rel="manifest" href="images/site.webmanifest">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+  
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
    
 </head>
 <body>
@@ -24,29 +34,59 @@
                     <div id="game">
                         <div id="extra">
                             <h2>
-                                <p>Page Title</p>
+                                <p>Sign up for a dish!</p>
                             </h2>
+                           
+                            <h4>Your name (Required)</h4>
+                            <input type="text" id="name" class="required">
         
-                            <div id="survey-block">
-                                <h3><strong>What are you bringing?</strong></h3>
-                                <h4>Your name (Required)</h4>
-                                <input type="text" id="name" class="required">
-                                <h4>Item  (Required)</h4>
-                                <input type="text" id="item" class="required">
-        
-                                
-                                <h4>Category</h4>
+                            <div id="userChoice">
+                                <h3><strong>I'm bringing...</strong></h3>
+                                <br>
+                                <h4>Select a food category:</h4>
                                 <select id="category">
                                     <option value=""></option>
-                                    <option value="Appetizers">Appetizers</option>
-                                    <option value="Entrées">Entrées</option>
-                                    <option value="Desserts">Desserts</option>
-                                    <option value="Drinks">Drinks</option>
+                                    <option value="starter">Starter</option>
+                                    <option value="chicken">Entrée: Chicken</option>
+                                    <option value="beef">Entrée: Beef</option>
+                                    <option value="pork">Entrée: Pork</option>
+                                    <option value="seafood">Entrée: Seafood</option>
+                                    <option value="dessert">Dessert</option>
+                                    <option value="drinks">Drinks</option>
                                 </select>
-                                <!-- Submit Button -->
+                                <h4>Your Food (Required)</h4>
+                                <input type="text" id="item" class="required">
                                 <button type="submit" id="submit">
                                     Submit</button>
                             </div>
+                            <div id="randomChoice">
+                                    <h3>I don't know what to bring...</h3>
+                                    <br>
+                                    <h4>Select a food category:</h4>
+                                        <select id="category2">
+                                            <option value=""></option>
+                                            <option value="starter">Starter</option>
+                                            <option value="chicken">Entrée: Chicken</option>
+                                            <option value="beef">Entrée: Beef</option>
+                                            <option value="pork">Entrée: Pork</option>
+                                            <option value="seafood">Entrée: Seafood</option>
+                                            <option value="dessert">Dessert</option>
+                                        </select>
+                                        <span id="errorMessage"></span>
+                               
+                                    <br>
+                                    <input type="text" id="categorySubmit">
+                                    <button type="submit" id="submit">Search</button>
+                                    <hr>
+                                    <div>
+                                        <h2>
+                                            Your Random Recipe:
+                                        </h2>
+                                    </div>
+                                    <div id="meals-display"></div>
+                                </div> 
+
+                         
                             <h3 id="food-name"></h3>
                             <h3 id="food-item"></h3>
                             <h3 id="food-category"></h3>
@@ -56,7 +96,7 @@
                     </div>
                 </section>
 
-    <script type="text/javascript" src="javascript/app.js">
+    <script type="text/javascript" src="javascript/appHome.js">
     </script>
 </body>
 </html>
