@@ -10,7 +10,10 @@ function openList(evt, listName) {
     }
     document.getElementById(listName).style.display = "block";
     evt.currentTarget.className += " active";
-  }
+}
+
+    document.getElementById("defaultOpen").click();
+  
 
   $(document).ready(function() {
     // Getting a reference to the input field where user adds a new user
