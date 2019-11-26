@@ -77,37 +77,25 @@ $("#submit").on("click", function (event) {
             item: $("#item").val(),
             category: $("#category").val(),
         };
-        $("#food-name").text(userData.name)
-        $("#food-item").text(userData.item)
-        $("#food-category").text(userData.category)
+        // $("#food-name").text(userData.name)
+        // $("#food-item").text(userData.item)
+        // $("#food-category").text(userData.category)
 
         // AJAX post the data to the user API.
         $.post("/api/users", userData, function (data) {
            window.location.href = "/display";
         });
         
-        $("#name").val(""),
-        $("#item").val(""),
-        $("#category").val(""),
+        // $("#name").val(""),
+        // $("#item").val(""),
+        // $("#category").val(""),
 
         
         console.log(userData)
         ajaxCall()
     }
 });
-function openList(evt, listName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(listName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
+
 
 function ajaxCall (){
     var queryURL = "https://www.themealdb.com/api/json/v2/9973533/randomselection.php"

@@ -31,11 +31,9 @@
       <div id="game">
         <div id="extra">
 
-          <h2>Tabs</h2>
-          <p>Click on the buttons inside the tabbed menu:</p>
-
+          
           <div class="tab">
-            <button class="tablinks" onclick="openList(event, 'Food')">Food</button>
+            <button class="tablinks" onclick="openList(event, 'Food')" id="defaultOpen">Food</button>
             <button class="tablinks" onclick="openList(event, 'Chat')">Chat</button>
           </div>
 
@@ -61,8 +59,7 @@
         </div>
 
         <div id="Chat" class="tabcontent">
-          <h3>Chat</h3>
-          <p>Chat content goes here.</p>
+          <iframe src="blog.html"></iframe>
           <div id="chat">
             <h2 id="chat-header"></h2>
             <div id="chat-messages"></div>
@@ -79,6 +76,8 @@
   </section>
   </div>
   <script type="text/javascript" src="javascript/appDisplay.js"></script>
+
+  
 </body>
 
 </html>

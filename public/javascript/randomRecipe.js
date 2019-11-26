@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
     var recipeCategory = "";
     var recipesArray = [];
 
@@ -12,21 +10,17 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-
             var results = response.meals;
-
-            for (var i = 0; i < results.length; i++) { //to get the meal Names 
+            for (var i = 0; i < results.length; i++) { 
+                //to get the meal Names 
                 var mealID = results[i].idMeal;
                 displayFullInfo(mealID);
             }
-
         });
     }
 
     function displayFullInfo(mealID) {
-
         var queryURL = "https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=" + mealID;
-
 
         $.ajax({
             url: queryURL,
@@ -35,9 +29,7 @@ $(document).ready(function () {
 
             console.log(queryURL);
             console.log(response.meals);
-
             var results = response.meals;
-
             for (var i = 0; i < results.length; i++) {
 
                 //stores ingredients into an array
@@ -60,23 +52,26 @@ $(document).ready(function () {
                 var newArray = newMeasurementsArray.map((e, i) => e + " " + newIngredientsArray[i]);
 
                 //creates a new paragraph to store everything into at the end
-                var measuredIngredientsDisplay = $("<p>");
+                var measuredIngredientsDisplay = $("<ul>");
 
                 //this loops through the new array and stores each combinaation in their own div which is appended to the paragraph
                 for (var x = 0; x < newArray.length; x++) {
-                    var newDiv = $("<div>");
-                    newDiv.text(newArray[x]);
-                    measuredIngredientsDisplay.append(newDiv);
+                    var newLi = $("<li>");
+                    newLi.text(newArray[x]);
+                    measuredIngredientsDisplay.append(newLi);
                 }
                 var categoryName = recipeCategory;
                 
                 //to get the meal Names 
                 var mealName = results[i].strMeal;
-                var nameDisplay = $("<h4>").text(mealName + " [" + categoryName + "]");
+                var nameDisplay = $("<h4>").text(mealName );
 
                 //to get instructions
                 var mealInstuctions = results[i].strInstructions;
-                var instructionsDisplay = $("<p>").text(mealInstuctions);
+                for (var j=0; j < mealInstuctions.length; j++) {
+                var res = mealInstuctions.replace(/\./g, ".<br>")};
+                console.log(res);
+                var instructionsDisplay = $("<p>").html(res);
 
                 //to get the jpgs
                 var pixDisplay = $("<img>");
@@ -85,8 +80,8 @@ $(document).ready(function () {
                 pixDisplay.attr("id", "foodPix");
 
                 //to create titles
-                var ingredientTitle = $("<h5>").text("Ingredients");
-                var instructionsTitle = $("<h5>").text("Instructions");
+                var ingredientTitle = $("<h5>").text("Ingredients:");
+                var instructionsTitle = $("<h5>").text("Instructions:");
 
 
                 //create a new div to hold all the stuff above
@@ -116,13 +111,7 @@ $(document).ready(function () {
 
     $("#categorySubmit").on("click", function (event) {
         event.preventDefault();
-
-        recipesArray = [];
-        var rCategory = $("#dropDown").val(); //determined by category selected
-
-        console.log("You selected " + rCategory)
-
-        //to validate whether a drop down selection was made for the food category
+        
         function validateForm() {
             var isValid = true;
 
@@ -130,16 +119,28 @@ $(document).ready(function () {
                 //if a drop down selection was not made for the food category
                 if ($(this).val() === "") {
                     isValid = false;
+                    // console.log("please select")
+                    console.log($(this).val())
                     $("#errorMessage").text("Please select a category") //provide an error message if no selection is made
                 }
             });
             return isValid;
-            isValid = false; //resets the value to false for future validations
+            // isValid = false; //resets the value to false for future validations
         }
 
         //if a drop down selection was made for the food category
         if (validateForm()) {
             $("#errorMessage").text("") //clear the error message if a selectio is made 
+           
+
+            recipesArray = [];
+            var rCategory = $(".chosen-select").val(); //determined by category selected
+    
+            console.log("You selected " + rCategory)
+    
+            //to validate whether a drop down selection was made for the food category
+
+            
             switch (rCategory) {
 
                 case "starter":

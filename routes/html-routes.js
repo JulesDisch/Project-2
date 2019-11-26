@@ -27,7 +27,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/page3.html"));
   });
 
-//ROUTES ADDED FOR THE DISCUSSION BOARD
+  //ROUTES ADDED FOR THE DISCUSSION BOARD
 // blog route loads blog.html - THE MAIN PAGE
 app.get("/blog", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/blog.html"));
@@ -46,7 +46,5 @@ app.get("/cms", function(req, res) {
 app.get("/authors", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/author-manager.html"));
 });
-
-
 
 };
