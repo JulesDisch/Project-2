@@ -12,6 +12,8 @@ function openList(evt, listName) {
     evt.currentTarget.className += " active";
   }
 
+  
+
   $(document).ready(function() {
     // Getting a reference to the input field where user adds a new user
     var $newItemInput = $("input.new-item");
@@ -33,6 +35,7 @@ function openList(evt, listName) {
     // $(document).on("blur", ".user-item", cancelEditItem);
     // $(document).on("blur", ".user-item", cancelEditCategory);
     $(document).on("submit", "#user-form", insertUser);
+
   
     // Our initial users array
     var users = [];
@@ -57,6 +60,29 @@ function openList(evt, listName) {
         initializeRows();
       });
     }
+
+    $("#submit").on("click", function() {
+      // save the character they typed into the character-search input
+      var searchedCharacter = $("#filter")
+        .val()
+        .trim();
+    
+      // Using a RegEx Pattern to remove spaces from searchedCharacter
+      // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+      searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
+    
+      // run an AJAX GET-request for our servers api,
+      // including the user's character in the url
+      if (searchedCharacter.length<1){
+        getUsers();
+      } else{
+        $.get("/api/users/category/"+searchedCharacter, function(data) {
+          // log the data to our console
+          users = data;
+        initializeRows();
+        });
+      }
+    });
   
     // This function deletes a user when the user clicks the delete button
     function deleteUser(event) {
