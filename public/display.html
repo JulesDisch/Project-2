@@ -38,21 +38,18 @@
           </div>
 
           <div id="Food" class="tabcontent">
-            <h3>Food</h3>
-            <p>Food content goes here.</p>
+            <h3>Filter</h3>
+            <p>Filt your food.</p>
             <div class="container">
               <div class="row">
                 <div class="col-1">
-                  <input id="name" placeholder="Your name" type="text">
-                </div>
-                <div class="col-2">
-                  <input id="category" placeholder="Add a category" type="text">
-                </div>
-                <div class="col-3">
-                  <input id="item" placeholder="Add an item" type="text">
+                  <input id="filter" placeholder="Search by Category" type="text">
+                  <button type="submit" id="submit">Search</button>
                 </div>
                 <div class="col-4">
-                  <button type="submit" class="btn btn-success">Add User</button>
+                    <form method="get" action="/">
+                    <button type="submit">Add another food</button>
+                </form>
                 </div>
               </div>
               <div class="user-container">
