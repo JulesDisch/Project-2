@@ -1,5 +1,12 @@
 $(document).ready(function() {
     /* global moment */
+    $("#post").on("click", function () {
+      window.location.href = "/cms";
+  });
+
+  $("#authors").on("click", function () {
+    window.location.href = "/authors";
+})
   
     // blogContainer holds all of our posts
     var blogContainer = $(".blog-container");
@@ -93,20 +100,29 @@ $(document).ready(function() {
       newPostCardHeading.addClass("card-header");
       var deleteBtn = $("<button>");
       deleteBtn.text("x");
-      deleteBtn.addClass("delete btn btn-danger");
+      deleteBtn.addClass("delete");
       var editBtn = $("<button>");
-      editBtn.text("EDIT");
-      editBtn.addClass("edit btn btn-info");
-      var newPostTitle = $("<h2>");
-      var newPostDate = $("<small>");
+      editBtn.text("Edit");
+      editBtn.addClass("edit");
+      var newPostTitle = $("<h3>");
+   
+
       var newPostAuthor = $("<h5>");
       newPostAuthor.text("Written by: " + post.Author.name);
       newPostAuthor.css({
-        padding: "10px",
+       
         float: "left",
         color: "blue",
-        "margin-top":
-        "-10px"
+        
+  
+      });
+
+         var newPostDate = $("<h5>");
+      newPostDate.css({//From CRUD
+       
+        float: "right",
+        color: "green",
+      
       });
       var newPostCategory = $("<h5>");//From CRUD
       newPostCategory.text("Category: " + post.category);//From CRUD
@@ -124,15 +140,20 @@ $(document).ready(function() {
       newPostTitle.text(post.title + " ");
       newPostBody.text(post.body);
       newPostDate.text(formattedDate);
-      newPostTitle.append(newPostDate);
+      var newPostCardFooter = $("<div>");
+      newPostCardFooter.addClass("card-footer");
+     
       newPostCardHeading.append(deleteBtn);
       newPostCardHeading.append(editBtn);
       newPostCardHeading.append(newPostTitle);
-      newPostCardHeading.append(newPostCategory);//From CRUD
-      newPostCardBody.append(newPostBody);
+      newPostCardHeading.append(newPostDate);
       newPostCardHeading.append(newPostAuthor);
+      newPostCardFooter.append(newPostCategory);//From CRUD
+      newPostCardBody.append(newPostBody);
+      
       newPostCard.append(newPostCardHeading);
       newPostCard.append(newPostCardBody);
+      newPostCard.append(newPostCardFooter);
       newPostCard.data("post", post);
       return newPostCard;
     }

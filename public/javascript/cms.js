@@ -1,4 +1,12 @@
 $(document).ready(function() {
+
+  $("#blog").on("click", function () {
+    window.location.href = "/blog";
+});
+
+$("#authors").on("click", function () {
+  window.location.href = "/authors";
+})
     // Getting jQuery references to the post body, title, form, and author select
     var bodyInput = $("#body");
     var titleInput = $("#title");
