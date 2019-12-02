@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Potluck Planner</title>
+  <title>Potluck Planner|Display</title>
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -13,14 +13,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="manifest" href="images/site.webmanifest">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
 </head>
 
 <body>
@@ -38,12 +30,21 @@
           </div>
 
           <div id="Food" class="tabcontent">
-            <h3>Filter</h3>
-            <p>Filt your food.</p>
-            <div class="container">
+            <h2>See what everyone's bringing</h2>
+           
               <div class="row">
                 <div class="col-1">
-                  <input id="filter" placeholder="Search by Category" type="text">
+                 
+                  <select id="filter">
+                      <option value="">Search by category</option>
+                      <option value="starter">Starter</option>
+                      <option value="chicken">Chicken</option>
+                      <option value="beef">Beef</option>
+                      <option value="pork">Pork</option>
+                      <option value="seafood">Seafood</option>
+                      <option value="dessert">Dessert</option>
+                      <option value="drinks">Drinks</option>
+                  </select>
                   <button type="submit" id="submit">Search</button>
                 </div>
                 <div class="col-4">
@@ -54,21 +55,15 @@
               </div>
               <div class="user-container">
               </div>
-            </div>
+           
           </div>
-        </div>
+       
 
         <div id="Chat" class="tabcontent">
           <iframe src="blog.html"></iframe>
-          <div id="chat">
-            <h2 id="chat-header"></h2>
-            <div id="chat-messages"></div>
-            <div id="chat-bar">
-              <input id="chat-input" />
-              <button id="chat-send">Send</button>
-            </div>
-          </div>
+         
         </div>
+      </div>
 
 
       </div>

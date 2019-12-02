@@ -23,8 +23,8 @@ module.exports = function(app) {
   });
 
   
-  app.get("/page3", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/page3.html"));
+  app.get("/print", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/print-recipe.html"));
   });
 
   //ROUTES ADDED FOR THE DISCUSSION BOARD

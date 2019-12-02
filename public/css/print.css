@@ -1,0 +1,22 @@
+body {
+    visibility:hidden;
+    margin: -300px;
+}
+
+.print {
+    visibility:visible;
+}
+
+.print h5 {
+    color: aqua;
+}
+
+.print img {
+    height: 300px;
+    width: 300px;
+}
+
+#foodVid { 
+    display: none;
+}
+

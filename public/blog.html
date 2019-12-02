@@ -3,91 +3,41 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Discussion Board</title>
-  <!-- Latest compiled and minified CSS & JS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Potluck Discussion</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/blogStyle.css">
   <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <style>
-			button.submit {
-	  float: right;
-	}
-	
-	form#cms {
-	  margin-top: 50px;
-	}
-	
-	#cms textarea {
-	  resize: none;
-	}
-	
-	.card-header button.delete,
-	button.edit {
-	  float: right;
-	  margin: 5px;
-	}
-	
-	.author-container {
-	  margin-top: 50px;
-	}
-	
-	.author-list {
-	  margin-top: 25px;
-	}
-	
-	.blog-container {
-	  margin-top: 30px;
-	}
-	
-	.blog {
-	  margin-top: 30px;
-	}
-	
-	.hidden {
-	  display: none;
-	}
-	
-	#author-name {
-	  width: 100%;
-	  height: 35px;
-	  margin-top: 5px;
-	}
-	
-	.top-30 {
-	  margin-top: 30px;
-	}
-	
-		</style>
+
 </head>
 
 <body>
-  <div class="container blog">
-      <div class="jumbotron" style="background-color: rgb(95, 135, 228) ; color: white;">
-          <h1 class="text-center">
-              <strong>
-                  <i class="fa fa-newspaper-o"></i> Discussion Board for the Potluck Party</strong>
-          </h1>
-      </div>
+  <div class="blog">
+    <div class="jumbotron">
+      <h1> <strong>Discussion Board for the Potluck Party</strong>
+      </h1>
+    </div>
     <div class="row">
-      <div class="col-md-4">
-        <div class="form-group"><!-- From CRUD -->
-          <select class="custom-select" id="category">
-            <option selected value="">All Categories</option>
-            <option value="Planning">Planning</option>
-            <option value="Recipes">Recipes</option>
-            <option value="Food Reviews">Food Reviews</option>
-            <option value="Party Reviews">Party Reviews</option>
-            <option value="Miscellaneous">Miscellaneous</option>
-          </select>
-        </div>
+      <div class="col-1">
+
+        <select class="custom-select" id="category">
+          <option selected value="">All Categories</option>
+          <option value="Planning">Planning</option>
+          <option value="Recipes">Recipes</option>
+          <option value="Food Reviews">Food Reviews</option>
+          <option value="Party Reviews">Party Reviews</option>
+          <option value="Miscellaneous">Miscellaneous</option>
+        </select>
+
       </div>
-      <div class="col-md-5 col-sm-2"></div>
-      <div class="col-md-1 col-sm-1">
-        <a class="btn btn-light" href="/cms">New Post</a>
-      </div>
-      <div class="col-md-1 col-sm-1">
-        <a class="btn btn-light" href="/authors">Manage Posters</a>
+
+      <div class="col-2">
+        <button type="submit" id="post">
+          New Post</button>
+
+        <button type="submit" id="authors">
+          Manage Posters</button>
       </div>
     </div>
     <br>
@@ -104,4 +54,4 @@
 
 </body>
 
-</html> 
+</html>

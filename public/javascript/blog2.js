@@ -96,10 +96,10 @@ $(document).ready(function () {
       newPostCardHeading.addClass("card-header");
       var deleteBtn = $("<button>");
       deleteBtn.text("x");
-      deleteBtn.addClass("delete btn btn-danger");
+      deleteBtn.addClass("delete");
       var editBtn = $("<button>");
-      editBtn.text("EDIT");
-      editBtn.addClass("edit btn btn-info");
+      editBtn.text("Edit");
+      editBtn.addClass("edit");
       var newPostTitle = $("<h2>");
       var newPostDate = $("<small>");
       var newPostAuthor = $("<h5>");

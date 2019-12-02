@@ -5,67 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Page 1 | Project Name</title>
+    <title> Potluck Planner|Homepage </title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="images/site.webmanifest">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
-  
-   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
-   
 </head>
+
 <body>
-        <div id="main-container" class="container">
-                <section class="main-section">
-                    <h1>Potluck Planner</h1>
-                    <hr>
-                    <div id="game">
-                        <div id="extra">
-                            <h2>
-                                <p>Sign up for a dish!</p>
-                            </h2>
-                            <div id="userChoice">
-                                <form id="userYes">
-                            <h4>Your name (Required)</h4>
-                            <input type="text" id="name" class="required">
-        
-                            
-                                <h3><strong>I'm bringing...</strong></h3>
-                                <br>
-                                <h4>Select a food category:</h4>
-                                <select id="category">
-                                    <option value=""></option>
-                                    <option value="starter">Starter</option>
-                                    <option value="chicken">Entrée: Chicken</option>
-                                    <option value="beef">Entrée: Beef</option>
-                                    <option value="pork">Entrée: Pork</option>
-                                    <option value="seafood">Entrée: Seafood</option>
-                                    <option value="dessert">Dessert</option>
-                                    <option value="drinks">Drinks</option>
-                                </select>
-                                <h4>Your Food (Required)</h4>
-                                <input type="text" id="item" class="required">
-                                <button type="submit" id="submit">
-                                    Submit</button>
-                                </form>
+    <div id="main-container" class="container">
+        <section class="main-section">
+            <h1>Potluck Planner</h1>
+            <hr>
+            <div id="game">
+                <div id="extra">
+                    <div id="signUp">
+                        <h2>Sign up for a dish! </h2>
+                        <div class="row">
+                            <div class="userCol-1">
+                                <div id="userChoice">
+                                    <form id="userYes">
+                                        <h3><strong>I'm bringing...</strong></h3>
+                                        <br>
+                                        <h4>Your name*</h4>
+                                        <input type="text" id="name" class="required">
+                                        <h4>Select a food category:</h4>
+                                        <select id="category">
+                                            <option value=""></option>
+                                            <option value="starter">Starter</option>
+                                            <option value="chicken">Entrée: Chicken</option>
+                                            <option value="beef">Entrée: Beef</option>
+                                            <option value="pork">Entrée: Pork</option>
+                                            <option value="seafood">Entrée: Seafood</option>
+                                            <option value="dessert">Dessert</option>
+                                            <option value="drinks">Drinks</option>
+                                        </select>
+                                        <h4>Your Food*</h4>
+                                        <input type="text" id="item" class="required">
+                                        <button type="submit" id="submit">
+                                            Submit</button>
+                                        <p><small>*Required</small></p>
+                                    </form>
+                                </div>
                             </div>
-                            <div id="randomChoice">
-                                <form id="userNo">
-                                    <h3>I don't know what to bring...</h3>
-                                    <br>
-                                    <h4>Select a food category:</h4>
+                            <div class="userCol-2">
+                                <div id="randomChoice">
+                                    <form id="userNo">
+                                        <h3>I don't know what to bring...</h3>
+                                        <br>
+                                        <h4>Select a food category to get a random recipe:</h4>
                                         <select class="chosen-select" id="#dropDown">
                                             <option value=""></option>
                                             <option value="starter">Starter</option>
@@ -76,29 +68,33 @@
                                             <option value="dessert">Dessert</option>
                                         </select>
                                         <h3 id="errorMessage"></h3>
-                               
-                                    <br>
-                                    <button type="submit" id="categorySubmit">Search</button>
-                                    <hr>
-                                    <div>
-                                        </form>
-                                        <h2>
-                                            Your Random Recipe:
-                                        </h2>
-                                    </div>
-                                    <div id="meals-display"></div>
-                                </div> 
-
-                         
-                            <h3 id="food-name"></h3>
-                            <h3 id="food-item"></h3>
-                            <h3 id="food-category"></h3>
-                            <object id="youtube" width="420" height="345" >
-                            </object>
+                                        <br>
+                                        <button type="submit" id="categorySubmit">Search</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
+                        <hr>
                     </div>
-                </section>
-
+                    <div id="randomRecipe">
+                        <h2> Your Random Recipe: </h2>
+                        <button type="submit" id="randomSubmit">Sign up for this recipe!</button>
+                        <button type="submit" id="searchAgain">Search again</button>
+                        <button id="print">Print this recipe</button>
+                        <div class="print" id="meals-display"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="fillRequired" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <br>
+            <h3>Please fill out required fields!</h3>
+            <button id="ok"> OK</button>
+        </div>
+    </div>
     <script type="text/javascript" src="javascript/appHome.js">
     </script>
     <script type="text/javascript" src="javascript/randomRecipe.js"></script>
