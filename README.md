@@ -13,39 +13,41 @@
 App Instructions:
 * Home Page
     * 1. If the User knows what they want to bring:
-        * a. The user enters their name, chooses a category from the food category drop down and food       item. Then clicks 'submit'.
+        * The user enters their name, chooses a category from the food category drop down and food       item. Then clicks 'submit'.
     * 2. If the user doesn't know what to bring: 
-        * a. The user selects a food category and clicks 'search'.
-        * b. A random recipe is provided based on the category.
-        * c. If the user wants to use this recipe, they go back to the top of the page and enter     
-             their name, a category and the food item.  Then click 'submit'.
-
-            <p><img src="/images/scrnprnt1"/></p>
-            <p><img src="/images/scrnprnt2"/></p>
-
+        * The user selects a food category and clicks 'search'.
+        * A random recipe is provided based on the category.  The returned data includes a youtube video, a picture and the recipe.
+        * The user can either:
+            * 1. Click 'print this recipe' to print the recipe or save the recipe.
+            * 2. Click 'search again' and get automatically routed back to the form to start a new search.
+            * 3. Click 'sign up for this recipe', which will pre-populate the food item and category into the form. The user then needs to click 'submit'.
     * 3. After clicking 'submit' the user should automatically be taken to the next page ("display   
          page").
 
+<p><img src="/images/home1"/></p>
+<p><img src="/images/home2"/></p>
+<p><img src="/images/home3"/></p>
+<p><img src="/images/home4"/></p>
+<p><img src="/images/home4"/></p>
 
-*  Display Page -- This page is divided into two tabs:
+*  Display Page -- This page is divided into two tabs.  Either tab can be accessed by clicking on the tab buttons -- 'food' or 'discussion'.
     * 1. Food Tab -- this tab displays all the food items that have been entered.
-        * a. The user can search the list by category.
-        * b. The user can add to the food list by clicking 'add another food', which takes the user    
-             back to the homepage to complete the form.
-        * c. The user can also delete any item that they've added to the list.
-
-            <p><img src="/images/scrnprnt3"/></p>
+        * The user can search the list by category.
+        * The user can add to the food list by clicking 'add another food', which takes the user    
+        back to the homepage to complete the form.
+        * The user can also delete any item that they've added to the list.
 
     * 2. Discussion Tab -- this tab allows users to review and create discussion posts.
-        * a. As a first time user, the user should click 'manage posters'.  The user should add their       name, then click 'create poster'.
+        *  As a first time user, the user should click 'manage posters'.  The user should add their       name, then click 'create poster'.
             * 1. On this screen, the user can delete a poster, create a post or go to posts by clicking on these links.
             * 2. The user can also return to the main discussion board by clicking the 'main board' button or create a post by clicking on the 'new post' button.
-        * b. After creating a poster profile, the use can click 'new post' or "create a post" and then      complete the form.  After the form has been completed, the user should click 'submit'.
+        *  After creating a poster profile, the use can click 'new post' or "create a post" and then      complete the form.  After the form has been completed, the user should click 'submit'.
 
-            <p><img src="/images/scrnprnt4"/></p>
-            <p><img src="/images/scrnprnt5"/></p>
-            <p><img src="/images/scrnprnt6"/></p>
-            <p><img src="/images/scrnprnt7"/></p>
+<p><img src="/images/display1"/></p>
+<p><img src="/images/display2"/></p>
+<p><img src="/images/display3"/></p>
+<p><img src="/images/display4"/></p>
+<p><img src="/images/display5"/></p>
 
 
 Github repo link:
