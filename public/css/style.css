@@ -9,7 +9,6 @@ li {
   .list-group-item {
     width: 100%;
     list-style-type: none;
-
   }
 
   ul {
@@ -103,64 +102,6 @@ li {
     margin-right: auto; 
     opacity: 0.9;
   }
-    
-  header {
-    position:fixed;
-    width: 100%;
-    margin: -10px -10px 40px;
-    background-color: #043634;
-    border-bottom:  2px  solid #cccccc;
-    z-index: 99;
-    opacity: 0.9;
-  }
-  
-  #logo {
-    float: left;
-    width: 250px;
-    height: 90px;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 90px;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    background: #4aaaa5;
-    margin-left: 10px;
-  }
-  
-  nav {
-    float: right;
-    padding-top: 30px;
-    font-size: 24px;
-    height: 80px;
-  }  
-  
-  nav a:hover:not(.active) {
-    background-color: #4aaaa5;
-  }
-  
-  .navbar a {
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline;
-    padding: 0px 15px;      
-  }
-  
-  .dropbtn {
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-right: 1px  solid #bbb;
-    border-radius: 0px;   
-    outline: none;
-    background-color: inherit;
-    font-family: inherit; 
-    margin: 0; 
-  }
   
   .dropdown {
     position: relative;
@@ -253,41 +194,6 @@ li {
     border-radius: 10px;
   }
   
-  #game h3 {
-    color:#514D4B;
-  }
-  
-  #game .column-1 {
-    width: 33.3%;
-    margin: auto;
-    text-align: center;
-    padding: 0 10px 0 0
-  }
-  
-  #game .column-2 {
-    float: left;
-    width: 33.3%;
-    margin: auto;
-    text-align: center;
-    padding: 0 10px 0 10px;
-  }
-  
-  #game .column-2 h2 {
-    padding-left: 0%;
-  }
-  
-  #game .column-3 {
-    float: left;
-    width: 33.3%;
-    margin: auto;
-    text-align: center;
-    padding: 0 0 0 10px;
-  }
-  
-  #crystals {
-    text-align: center;
-  }
-  
   .modal {
     display: none; 
     position: fixed; 
@@ -377,34 +283,6 @@ li {
     border: 1px solid #ccc;
     border-top: none;
   }
-
-  
-  footer {
-    position: fixed;
-    width: 100%;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    left: 0;
-    bottom: 0;
-    color: white;
-    text-align: center;
-    font-size: 12px;
-    z-index: 99;
-    opacity: 0.9;
-    background-color: #043634;
-    border-top:  2px  solid #cccccc;
-  }
-  
-  footer p {
-    padding: 12px 0;
-  }
-   
-  #rules-area {
-    width: 95%;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    color: #83DDEF;
-    list-style-image: url("../images/tinyshield.png");
-  }
   
   #extra{
     font-family: 'Times New Roman', Times, serif; 
@@ -415,24 +293,11 @@ li {
   }
   #game {
     background-color: #DDDDEE;
-    
     background-repeat: no-repeat;
     background-size: cover;
     margin: 20px 0;
     max-width: 960px; 
     top: 125px;
-  }
-  
-  .crystal-image {
-    width: 25%;
-    max-height: 225px;
-    padding: 20px;
-    align-content: center; 
-    opacity: 0.6;
-  }
-  
-  .crystal-image:hover {
-    opacity: 0.9;
   }
   
   .row {
@@ -521,7 +386,6 @@ float: right;
     margin-left: 0px
   } 
   #randomRecipe img {
-   
     width: 45%;
    height: auto;
     margin-left: 0%;
@@ -529,7 +393,6 @@ float: right;
   }
   
   #randomRecipe object {
-   
     width: 45%;
     height: auto;
     min-height: 296px;
@@ -540,15 +403,11 @@ float: right;
 
   @media screen and (max-width: 768px) {
     #randomRecipe img {
-   
       width: 100%;
      height: auto;
-      
-     
     }
     
     #randomRecipe object {
-     
       width: 100%;
       height: auto;
       margin-bottom: 20px;
@@ -560,47 +419,6 @@ float: right;
       position: relative;
       min-height: 100%;
     }
-  
-    footer {
-      position: absolute;
-      width: auto;
-      opacity: 1;
-      border-radius: 0px;
-      text-align: center;
-      bottom: -8px;
-      right: -8px;
-      left: -8px;
-      height: 50px;
-    }
-  
-    header {
-      position: static;
-      width: auto;
-      margin: -8px -8px 10px;
-    }
-  
-    footer p {
-      padding: 18px 0;
-    }
-    
-    #logo {
-      width: 100%;
-      margin-left: 0px;
-      clear: both; 
-      height: 50px;
-      line-height: initial;
-      padding-top: 10px;
-    }
-  
-    nav { 
-      margin-left: 0px;
-      clear: both; 
-      float: none;   
-      text-align: center;  
-      height: 50px;  
-      line-height: initial;  
-      padding-top: 10px;    
-    }  
   
     .dropdown-content a {
       padding: 5px 10px;

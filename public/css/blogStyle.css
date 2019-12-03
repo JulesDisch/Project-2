@@ -88,6 +88,7 @@ button {
     padding: 5px;
     margin: 5px; 
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
     float: right;
   }
 
@@ -174,7 +175,7 @@ button.submit {
     margin-top: 30px;
   }
 
-  table {
+  /* table {
       width: 100%;
   }
 
@@ -195,4 +196,8 @@ tr {
     background:  rgba(182, 221, 159, 0.5);
    
 
+} */
+
+.col-12{
+    float: right;
 }
