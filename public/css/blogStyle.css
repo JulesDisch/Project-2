@@ -77,22 +77,9 @@ h3 {
 
 h5 {
     padding: 10px;
-    
     font-weight: 700;
-    /* margin-top:
-    -15px;  */
 }
 
-/* small {
-   
-    padding: 10px;
-        float: right;
-        color: green;
-        font-weight: 700;
-        margin-top:
-        -15px;
-     
-} */
 
 button {
     color: whitesmoke;
@@ -186,3 +173,26 @@ button.submit {
   .nav-row {
     margin-top: 30px;
   }
+
+  table {
+      width: 100%;
+  }
+
+  th {
+      font-size: 24px;
+  }
+
+  td {
+    font-size: 16px;
+    
+    
+
+}
+
+tr {
+   
+    margin-left: 150px;
+    background:  rgba(182, 221, 159, 0.5);
+   
+
+}

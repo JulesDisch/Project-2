@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  $("#post").on("click", function () {
+    window.location.href = "/cms";
+});
+$("#blog").on("click", function () {
+  window.location.href = "/blog";
+});
+
+$("#authors").on("click", function () {
+  window.location.href = "/authors";
+})
     /* global moment */
   
     // blogContainer holds all of our posts
@@ -77,6 +87,8 @@ $(document).ready(function () {
     }
   
     // InitializeRows handles appending all of our constructed post HTML inside blogContainer
+    
+
     function initializeRows() {
       blogContainer.empty();
       var postsToAdd = [];
@@ -100,16 +112,23 @@ $(document).ready(function () {
       var editBtn = $("<button>");
       editBtn.text("Edit");
       editBtn.addClass("edit");
-      var newPostTitle = $("<h2>");
-      var newPostDate = $("<small>");
+      var newPostTitle = $("<h3>");
       var newPostAuthor = $("<h5>");
       newPostAuthor.text("Written by: " + post.Author.name);
       newPostAuthor.css({
-        padding: "10px",
+       
         float: "left",
         color: "blue",
-        "margin-top":
-          "-10px"
+        
+  
+      });
+
+         var newPostDate = $("<h5>");
+      newPostDate.css({//From CRUD
+       
+        float: "right",
+        color: "green",
+      
       });
       var newPostCategory = $("<h5>");//From CRUD
       newPostCategory.text("Category: " + post.category);//From CRUD
@@ -119,7 +138,7 @@ $(document).ready(function () {
         color: "green",
         "font-weight": "700",
         "margin-top":
-          "-15px"
+        "-15px"
       });
       var newPostCardBody = $("<div>");
       newPostCardBody.addClass("card-body");
@@ -127,23 +146,21 @@ $(document).ready(function () {
       newPostTitle.text(post.title + " ");
       newPostBody.text(post.body);
       newPostDate.text(formattedDate);
-      newPostTitle.append(newPostDate);
+      var newPostCardFooter = $("<div>");
+      newPostCardFooter.addClass("card-footer");
+     
       newPostCardHeading.append(deleteBtn);
       newPostCardHeading.append(editBtn);
       newPostCardHeading.append(newPostTitle);
-      newPostCardHeading.append(newPostCategory);//From CRUD
-      newPostCardBody.append(newPostBody);
+      newPostCardHeading.append(newPostDate);
       newPostCardHeading.append(newPostAuthor);
+      newPostCardFooter.append(newPostCategory);//From CRUD
+      newPostCardBody.append(newPostBody);
+      
       newPostCard.append(newPostCardHeading);
       newPostCard.append(newPostCardBody);
-      if (post.Author.id != authorId) {///filter out only the selected author's posts
-        newPostCardBody.hide();
-        newPostCardHeading.hide();
-        newPostCard.hide();
-      }
+      newPostCard.append(newPostCardFooter);
       newPostCard.data("post", post);
-      // console.log("The post.Author.id is " + post.Author.id)
-      // console.log("The authorId is " + authorId)
       return newPostCard;
     }
   

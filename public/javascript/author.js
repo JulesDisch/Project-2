@@ -1,4 +1,11 @@
 $(document).ready(function() {
+  $("#post").on("click", function () {
+    window.location.href = "/cms";
+});
+$("#blog").on("click", function () {
+  window.location.href = "/blog";
+});
+
     // Getting references to the name input and author container, as well as the table body
     var nameInput = $("#author-name");
     var authorList = $("tbody");
