@@ -24,11 +24,11 @@ App Instructions:
     * 3. After clicking 'submit' the user should automatically be taken to the next page ("display   
          page").
 
-<p><img src="/images/home1"/></p>
-<p><img src="/images/home2"/></p>
-<p><img src="/images/home3"/></p>
-<p><img src="/images/home4"/></p>
-<p><img src="/images/home4"/></p>
+<p><img src="/images/home1.png"/></p>
+<p><img src="/images/home2.png"/></p>
+<p><img src="/images/home3.png"/></p>
+<p><img src="/images/home4.png"/></p>
+<p><img src="/images/home4.png"/></p>
 
 *  Display Page -- This page is divided into two tabs.  Either tab can be accessed by clicking on the tab buttons -- 'food' or 'discussion'.
     * 1. Food Tab -- this tab displays all the food items that have been entered.
@@ -43,11 +43,11 @@ App Instructions:
             * 2. The user can also return to the main discussion board by clicking the 'main board' button or create a post by clicking on the 'new post' button.
         *  After creating a poster profile, the use can click 'new post' or "create a post" and then      complete the form.  After the form has been completed, the user should click 'submit'.
 
-<p><img src="/images/display1"/></p>
-<p><img src="/images/display2"/></p>
-<p><img src="/images/display3"/></p>
-<p><img src="/images/display4"/></p>
-<p><img src="/images/display5"/></p>
+<p><img src="/images/display1.png"/></p>
+<p><img src="/images/display2.png"/></p>
+<p><img src="/images/display3.png"/></p>
+<p><img src="/images/display4.png"/></p>
+<p><img src="/images/display5.png"/></p>
 
 
 Github repo link:
