@@ -19,7 +19,7 @@
   "homepage": "https://github.com/JulesDisch/Project-2#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "firebase": "^7.4.0",
     "mysql2": "^2.0.0",
     "secure-env": "^1.2.0",
